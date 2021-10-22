@@ -10,6 +10,19 @@ Write a program that asks the user his/her age and check for the following condi
 - `if` the age is greater than 55 then print the message " You are too old to participate in the marthon".
 👇
 */
+let age = +prompt("What is you Age?");
+
+if (age >= 12 && age < 55) {
+  alert("You can participate in the marathon");
+} else if (age > 4 && age <= 11) {
+  alert(" You are too young to participate in the marathon");
+} else if (age <= 4) {
+  alert(" Hey Kiddo! Can You Walk ?");
+} else if (age >= 55) {
+  alert(" You are too old to participate in the marthon");
+} else {
+  alert("Put a valid input");
+}
 
 // Loops
 /*
@@ -22,11 +35,42 @@ n = 7 => output: heeeeeeello
 */
 // [Your code goes here]
 
+let output = "";
+let n = prompt("Enter number of time you want repeat e in hello");
+
+for (let i = 1; i <= n; i++) {
+  output = output + "e";
+}
+
+let result = "h" + output + "llo";
+
+console.log(result);
+
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
 👇
 */
 // [Your code goes here]
+let first = prompt("First number here");
+let natural = prompt("Enter second Number");
+let ops = prompt("you can add,mul,div,sub any number");
+if (isNaN(first) || isNaN(natural)) {
+  alert("Enter a Valid Number");
+} else if (ops === "add") {
+  let add = first + natural;
+  alert(add);
+} else if (ops === "mul") {
+  let mul = first * natural;
+  alert(mul);
+} else if (ops === "sub") {
+  let sub = first - natural;
+  alert(sub);
+} else if (ops === "div") {
+  let div = first / natural;
+  alert(div);
+} else {
+  alert("Enter a Valid Operation");
+}
 
 /* Switch Statement
 
@@ -46,7 +90,37 @@ Take a number value from user and alert the message if it matches the conditions
 
 */
 // [Your code goes here]
+let number = +prompt("Number Matches");
 
+switch (true) {
+  case 1 === number:
+    alert("ONE");
+    break;
+  case 2 === number:
+    alert("TWO");
+    break;
+  case 3 === number:
+    alert("THREE");
+    break;
+  case 4 === number:
+    alert("FOUR");
+    break;
+  case 5 === number:
+    alert("FIVE");
+    break;
+  case 6 === number:
+    alert("SIX");
+    break;
+  case 7 === number:
+    alert("SEVEN");
+    break;
+  case 8 === number:
+    alert("EIGHT");
+    break;
+  case 9 === number:
+    alert("NINE");
+    break;
+}
 /*
 🎖Using switch statement do the following
 
@@ -62,11 +136,49 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+let marks = +prompt("Enter your marks");
+
+switch (true) {
+  case marks >= 90:
+    alert("Your Grade is AA");
+    break;
+  case marks >= 80 && marks < 90:
+    alert("Your Grade is AB");
+    break;
+  case marks >= 70 && marks < 80:
+    alert("Your Grade is BB");
+    break;
+  case marks >= 60 && marks < 70:
+    alert("Your Grade is BC");
+    break;
+  case marks >= 50 && marks < 60:
+    alert("Your Grade is CC");
+    break;
+  case marks >= 40 && marks < 50:
+    alert("Your Grade is CD");
+    break;
+  case marks >= 30 && marks < 40:
+    alert("Your Grade is DD");
+    break;
+  case marks < 30:
+    alert("Your Grade is FF");
+    break;
+  default:
+    alert("Not A Valid Input");
+}
 
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
 // [your code goes here]
+let numA = +prompt("First Number");
+let numB = +prompt("Second Number");
+
+if (numA > numB) {
+  alert(`${numA} larger number`);
+} else if (numA < numB) {
+  alert(`${numB} larger number`);
+}
 
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
@@ -86,3 +198,27 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+
+let numberA = +prompt("Enter First Number");
+let numberB = +prompt("Enter Second Number");
+let operation = prompt("Enter Operation to Perfrom e.g add, sub, div, mul");
+
+if (isNaN(numberA) || isNaN(numberB)) {
+  alert("Enter a Valid Number");
+} else if (operation === "add") {
+  let add = numberA + numberB;
+  alert(add);
+} else if (operation === "mul") {
+  let mul = numberA * numberB;
+  alert(mul);
+} else if (numberA < numberB) {
+  alert("Number Two is larger then Number one");
+} else if (operation === "sub") {
+  let sub = numberA - numberB;
+  alert(sub);
+} else if (operation === "div") {
+  let div = numberA / numberB;
+  alert(div);
+} else {
+  alert("Enter a Valid Operation");
+}
